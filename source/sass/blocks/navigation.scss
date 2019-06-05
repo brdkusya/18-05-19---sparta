@@ -1,0 +1,29 @@
+.navigation__list {
+	display: flex;
+	justify-content: space-between;
+	padding: 0px;
+	list-style: none;
+	& button {
+		background-color: transparent;
+		background-size: contain;
+		background-repeat: no-repeat;
+		border: none;
+	}
+}
+.navigation__item--prev > button,
+.navigation__item--next > button {
+	height: 19px;
+}
+.navigation__item--prev > button {
+	width: 40px;
+	background-image: url(../img/comment/comment-prev.png);
+}
+.navigation__item--next > button {
+	width: 66px;
+	background-image: url(../img/comment/comment-next.png);
+}
+.navigation__item--this > button {
+	width: 10px;
+	height: 9px;
+	background-image: url(../img/comment/comment-this.png);
+}

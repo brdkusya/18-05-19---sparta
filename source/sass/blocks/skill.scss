@@ -1,0 +1,210 @@
+.skill {
+	padding-top: 45px;
+	padding-bottom: 50px;
+
+	background-image: url(../img/skill/skill-bg.png);
+	background-size: 792px 584px;
+	background-repeat: no-repeat;
+	background-position: -570px bottom;
+}
+.skill .container {
+	overflow: hidden;
+}
+.skill__title {
+	margin: 0px;
+	&::before {
+		content: 'Ты приобретешь навык';
+	}
+}
+.skill__list {
+	position: relative;
+
+	margin: 0px;
+	margin-top: -40px;
+	padding: 0px;
+	padding-top: 100px;
+	list-style: none;
+
+	&::before {
+		content: '';
+
+		position: absolute;
+		top: 0px;
+		left: -85px;
+
+		width: 170px;
+		height: 841px;
+
+		background-image: url(../img/skill/skill-line--small.svg);
+		background-size: 170px 841px;
+		background-repeat: no-repeat;
+		background-position: left top;
+	}
+
+	&::after {
+		content: '';
+
+		position: absolute;
+		top: 130px;
+		left: -15px;
+
+		width: 58px;
+		height: 292px;
+
+		background-image: url(../img/skill/skill-another--small.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}
+.skill__item {
+	position: relative;
+	line-height: 24px;
+
+	&:nth-child(1) {
+		padding-left: 47px;
+		margin-left: 30px;
+		margin-bottom: 80px;
+	}
+	&:nth-child(2) {
+		padding-left: 36px;
+		margin-left: 65px;
+		margin-bottom: 70px;
+	}
+	&:nth-child(3) {
+		padding-left: 36px;
+		margin-left: 71px;
+		margin-bottom: 110px;
+	}
+	&:nth-child(4) {
+		padding-left: 43px;
+		margin-left: 47px;
+		margin-bottom: 65px;
+	}
+	&:nth-child(5) {
+		padding-left: 48px;
+		margin-left: -11px;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0px;
+		top: calc(50% - 10px);
+		
+		width: 21px;
+		height: 21px;
+		background-image: url(../img/action-plan/pointer.svg);
+		background-size: contain;
+	}
+}
+
+@media (min-width: 768px) {
+	.skill {
+		background-position: -360px bottom;
+	}
+	.skill__list {
+		padding-top: 60px;
+		&::before {
+			width: 337px;
+			height: 781px;
+
+			left: 95px;
+			
+			background-image: url(../img/skill/skill-line--normal.svg);
+			background-size: 337px 781px;
+		}
+		&::after {
+			top: 110px;
+			left: 95px;
+	
+			width: 187px;
+			height: 236px;
+	
+			background-image: url(../img/skill/skill-another--normal.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+	.skill__item {
+		&:nth-child(1) {
+			width: 145px;
+			padding-left: 100px;
+			margin-left: 177px;
+			margin-bottom: 75px;
+		}
+		&:nth-child(2) {
+			width: 220px;
+			padding-left: 87px;
+			margin-left: 283px;
+			margin-bottom: 72px;
+		}
+		&:nth-child(3) {
+			width: 220px;
+			padding-left: 90px;
+			margin-left: 354px;
+			margin-bottom: 108px;
+		}
+		&:nth-child(4) {
+			width: 235px;
+			padding-left: 86px;
+			margin-left: 405px;
+			margin-bottom: 90px;
+		}
+		&:nth-child(5) {
+			padding-left: 77px;
+			margin-left: 422px;
+		}
+		&::before {
+			top: 0px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.skill {
+		background-position: -140px bottom;
+		background-size: 1184px 873px;
+	}
+	.skill__list {
+		width: 667px;
+		margin-left: auto;
+		&::before {
+			left: 0px;
+		}
+		&::after {
+			top: 100px;
+			left: 0;
+		}
+	}
+	.skill__item {
+		&:nth-child(1) {
+			width: 200px;
+			padding-left: 97px;
+			margin-left: 80px;
+			margin-bottom: 70px;
+		}
+		&:nth-child(2) {
+			width: 235px;
+			padding-left: 85px;
+			margin-left: 185px;
+			margin-bottom: 72px;
+		}
+		&:nth-child(3) {
+			width: 235px;
+			padding-left: 88px;
+			margin-left: 255px;
+			margin-bottom: 105px;
+		}
+		&:nth-child(4) {
+			width: 240px;
+			padding-left: 85px;
+			margin-left: 307px;
+			margin-bottom: 90px;
+		}
+		&:nth-child(5) {
+			width: 255px;
+			padding-left: 85px;
+			margin-left: 325px;
+		}
+	}
+}

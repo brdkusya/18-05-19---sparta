@@ -1,0 +1,176 @@
+.instructor__title {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	&::before {
+		content: 'Инструктор';
+	}
+}
+.instructor__image {
+	height: 290px;
+	width: auto;
+}
+.instructor__name {
+	line-height: 40px;
+	margin: 0;
+
+	font-size: 24px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	text-align: center;
+	color: $accent;
+}
+.instructor__list-first,
+.instructor__list-second {
+	position: relative;
+
+	margin: 0px;
+	padding-left: 45px;
+	list-style: none;
+
+	&::before {
+		content: '';
+
+		position: absolute;
+		top: 0;
+		left: -15px;
+
+		width: 53px;
+		height: 100%;
+
+		background-image: url(../img/instructor/instructor-list.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	& > li {
+		margin-bottom: 25px;
+	}
+
+	& > li:last-of-type {
+		margin-bottom: 0px;
+	}
+}
+.instructor__list-first {
+	margin-top: 20px;
+}
+.instructor__list-second {
+	margin-top: 30px;
+	margin-bottom: 70px;
+
+	&::before {
+		background-position: right top;
+	}
+}
+.instructor__list-third {
+	margin: 0px;
+	margin-bottom: 50px;
+	padding: 0px;
+	list-style: none;
+	& > li {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	& .instructor__number {
+		width: 92px;
+
+		font-family: $f-font;
+		font-size: 100px;
+		letter-spacing: 0.5px;
+		line-height: 100px;
+		color: $accent;
+ }
+ & .instructor__descr {
+	 width: 168px;
+	 margin: 0px;
+ }
+}
+
+@media (min-width: 768px) {
+	.instructor__title {
+		margin-top: 35px;
+		margin-bottom: 35px;
+	}
+	.instructor__image {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.instructor__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 35px;
+		margin-bottom: 80px;
+	}
+	.instructor__name {
+		line-height: 65px;
+		width: 100%;
+		flex-shrink: 0;
+	}
+	.instructor__list-first {
+		width: 408px;
+		margin-top: 0px;
+		box-sizing: border-box;
+	}
+	.instructor__list-second {
+		width: 282px;
+		margin: 0px;
+		box-sizing: border-box;
+	}
+	.instructor__list-third {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		& > li {
+			width: 345px;
+			justify-content: flex-start;
+		}
+		.instructor__number {
+			margin-right: 30px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.instructor {
+		& > .container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+	.instructor__title {
+		margin-top: 0px;
+		margin-bottom: 25px;
+	}
+	.instructor__image {
+		display: inline-block;
+		width: 310px;
+		height: 310px;
+		margin: 0;
+	}
+	.instructor__wrapper {
+		width: 780px;
+		margin-top: 0px;
+		margin-bottom: 78px;
+	}
+	.instructor__name {
+		text-align: left;
+	}
+	.instructor__list-third {
+		width: 100%;
+		justify-content: space-around;
+		margin-bottom: 60px;
+		& > li {
+			width: auto;
+			flex-direction: column;
+		}
+		.instructor__number {
+			margin: 0px;
+		}
+		.instructor__descr {
+			text-align: center;
+		}
+	}
+}

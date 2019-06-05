@@ -1,0 +1,124 @@
+.program {
+	overflow: hidden;
+	background-image: url(../img/program/program-bg--small.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	& b {
+		display: block;
+		margin-bottom: 50px;
+	}
+}
+.program__title {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	&::before {
+		content: 'В программе спецкурса';
+		color: #fff;
+		opacity: 1;
+	}
+}
+.program__list {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding: 0px;
+	list-style: none;
+	counter-reset: num;
+}
+.program__item {
+	position: relative;
+	padding-left: 45px;
+	padding-bottom: 30px;
+	line-height: 24px;
+	&::before {
+		content: '0' counter(num);
+		counter-increment: num;
+
+		position: absolute;
+		top: 2px;
+		left: 0px;
+
+		font-family: $f-font;
+		font-size: 30px;
+		line-height: 30px;
+		letter-spacing: 0.5px;
+		color: $accent;
+	}
+}
+.program__album {
+	height: 284px;
+	margin-top: 50px;
+	margin-bottom: -20px;
+
+	background-image: url(../img/program/program-album.png);
+	background-size: auto 289px;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+	.program {
+		background-image: url(../img/program/program-bg--normal.png);
+		background-position: center 190px;
+	}
+	.program__title {
+		&::before {
+			color: $text;
+			opacity: .1;
+		}
+	}
+	.program__list {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: space-between;
+		height: 270px;
+		margin-top: 100px;
+		margin-bottom: 20px;
+	}
+	.program__item {
+		width: 345px;
+		box-sizing: border-box;
+	}
+	.program__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 60px;
+		& > b,
+		& > .start-button {
+			margin: 0px;
+		}
+	}
+	.program__album {
+		height: 340px;
+		margin-top: 0px;
+		background-size: auto 400px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.program {
+		background-image: url(../img/program/program-bg--big.png);
+		background-size: 1137px 634px;
+		background-position: center 250px;
+	}
+	.program__list {
+		margin-top: 130px;
+		margin-bottom: 55px;
+		align-content: space-around;
+	}
+	.program__item {
+		width: 380px;
+	}
+	.program__wrapper {
+		justify-content: center;
+		margin-bottom: 130px;
+		& b {
+			margin-right: 55px;
+		}
+	}
+	.program__album {
+		height: 500px;
+		background-size: contain;
+	}
+}

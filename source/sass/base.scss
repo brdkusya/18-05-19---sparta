@@ -1,0 +1,86 @@
+@include font-face("core-sans-e", "../fonts/CoreSansERegular/CoreSansERegular");
+@include font-face("core-sans-e", "../fonts/CoreSansELight/CoreSansELight", 300);
+@include font-face("core-sans-e", "../fonts/CoreSansELightItalic/CoreSansELightItalic", 300, italic);
+@include font-face("core-sans-e", "../fonts/CoreSansEMedium/CoreSansEMedium", 500);
+@include font-face("core-sans-e", "../fonts/CoreSansEBold/CoreSansEBold", 600);
+@include font-face("core-sans-e", "../fonts/CoreSansEHeavy/CoreSansEHeavy", 800);
+@include font-face("core-sans-e", "../fonts/CoreSansEBlack/CoreSansEBlack", 900);
+
+@include font-face("besom", "../fonts/BesomRegular/BesomRegular");
+
+body {
+    min-width: 320px;
+    margin: 0px;
+    padding: 0px;
+
+    font-family: $d-font;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.65;
+    color: $text;
+
+    background-color: $bg;
+}
+.container {
+    width: 290px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: no-wrap;
+	clip-path: inset(100%);
+	overflow: hidden;
+}
+
+.start-button {
+	width: 307px;
+	padding: 0;
+	padding-top: 14px;
+	padding-bottom: 34px;
+	margin-right: -9px;
+	margin-left: -9px;
+
+	font-weight: 900;
+	font-size: 18px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: $bg;
+
+	border: none;
+	background-color: transparent;
+	background-image: url(../img/button-start.png);
+}
+
+// От 768px планшетная версия
+@media (min-width: 768px) {
+	.container {
+		width: 720px;
+	}
+	.start-button {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+// От 1200px десктопная версия
+@media (min-width: 1200px) {
+	.container {
+		width: 1140px;
+	}
+	.start-button {
+		display: block;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+}

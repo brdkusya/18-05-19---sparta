@@ -1,0 +1,12 @@
+.location__title {
+	&::before {
+		content: 'Мы здесь были';
+	}
+}
+.location__map {
+	height: 487px;
+	background-image: url(../img/location/location-bg.png);
+	background-size: 1920px 427px;
+	background-position: -334px -124px;
+	background-repeat: no-repeat;
+}

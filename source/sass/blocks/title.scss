@@ -1,0 +1,140 @@
+.title {
+	display: block;
+
+	font-size: 36px;
+	font-weight: 900;
+	letter-spacing: 0.5px;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: $bg;
+}
+.title--small {
+	font-size: 27px;
+}
+.title--big {
+	font-size: 38px;
+	line-height: 38px;
+}
+.title--red {
+	color: $accent;
+	text-align: center;
+}
+.title-accent {
+	font-family: $f-font;
+	font-size: 80px;
+	letter-spacing: 0.5px;
+	line-height: 80px;
+	text-transform: uppercase;
+	color: $accent;
+}
+.title-accent--small {
+	font-size: 48px;
+	line-height: 48px;
+}
+.title-accent--big {
+	font-size: 102px;
+	line-height: 102px;
+}
+.title-accent--wight {
+	color: $bg;
+}
+
+.title--double {
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+
+	width: 100%;
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	&::before {
+
+		position: absolute;
+		top: 8px;
+		z-index: -1;
+
+		display: block;
+		width: 2000px;
+		left: calc(50vw - 1000px);
+
+		font-family: $f-font;
+		font-size: 100px;
+		letter-spacing: 0.5px;
+		text-align: center;
+		line-height: 120px;
+		white-space: nowrap;
+		color: #32383f;
+		
+		opacity: .1;
+	}
+}
+
+@media (min-width: 768px) {
+	.title {
+		font-size: 48px;
+		line-height: 48px;
+	}
+	.title--small {
+		font-size: 36px;
+		line-height: 40px;
+	}
+	.title--big {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.title-accent {
+		font-size: 90px;
+		line-height: 90px;
+	}
+	.title-accent--small {
+		font-size: 60px;
+		line-height: 60px;
+	}
+	.title-accent--big {
+		font-size: 107px;
+		line-height: 107px;
+	}
+	.title--double {
+		padding-top: 55px;
+		padding-bottom: 55px;
+		&::before {
+			font-size: 130px;
+			line-height: 160px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.title {
+		font-size: 68px;
+	}
+	.title--small {
+		font-size: 36px;
+		line-height: 40px;
+	}
+	.title--big {
+		font-size: 68px;
+		line-height: 68px;
+	}
+	.title-accent {
+		font-size: 120px;
+		line-height: 120px;
+	}
+	.title-accent--small {
+		font-size: 87px;
+		line-height: 87px;
+	}
+	.title-accent--big {
+		font-size: 180px;
+		line-height: 180px;
+	}
+	.title--double {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		&::before {
+			font-size: 180px;
+			line-height: 220px;
+		}
+	}
+}
